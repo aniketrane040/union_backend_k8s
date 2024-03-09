@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: union-backend
-        image: 
+        image: union-backend
         ports:
         - containerPort: 3000
         env:
