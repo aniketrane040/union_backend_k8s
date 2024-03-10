@@ -17,6 +17,7 @@ spec:
       containers:
       - name: union-backend
         image: union-backend
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
         env:
