@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
     name: mongodb-configmap
 data:
-    database_url: mongodb://mongo:27017/union_db
+    database_url: mongodb://mongo-service:27017/union_db
