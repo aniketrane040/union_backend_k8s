@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: union-ingress
+  namespace: union-app
+spec:
+  rules:
+  - host: union-backend.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: union-service
+            port:
+              number: 3000
