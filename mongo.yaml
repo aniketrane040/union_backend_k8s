@@ -4,6 +4,7 @@ metadata:
   name: mongodb-deployment
   labels:
     app: mongodb
+  namespace: union-app
 spec:
   replicas: 1
   selector:
@@ -35,6 +36,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongo-service
+  namespace: union
 spec:
   selector:
     app: mongodb
