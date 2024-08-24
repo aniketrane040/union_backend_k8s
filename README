@@ -1,4 +1,0 @@
-helm commands :
-
-helm package union_backend_k8s
-helm install union-backend-release union_backend_k8s
