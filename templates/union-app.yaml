@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: union-backend
-        image: union-backend
+        image: public.ecr.aws/m7p9x7q8/union-backend-app
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
