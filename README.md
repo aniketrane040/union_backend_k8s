@@ -27,16 +27,18 @@ helm install istiod istio/istiod -n istio-system
 
 # Install Istio ingress gateway
 helm install istio-ingressgateway istio/gateway -n istio-system
+```
 
 ### 2. Install Helm Release
 
 ```bash
 helm install union-app-relase .
+```
 
 
 ### 3. Access the Application
 
+Access application on istio gateway endpoint
+
 ```bash
 kubectl get svc istio-ingressgateway -n istio-system
-
-Access application on istio gateway endpoint
