@@ -1,0 +1,15 @@
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: union-gateway
+  namespace: union-app
+spec:
+  selector:
+    istio: ingressgateway # Ensure this matches the selector for the Istio ingress gateway
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "*"  # You can replace this with your specific domain if you have one

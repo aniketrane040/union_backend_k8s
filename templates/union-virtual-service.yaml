@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: union-virtualservice
+  namespace: union-app
+spec:
+  hosts:
+  - "*"  # Use your specific domain if available
+  gateways:
+  - union-gateway  # Referencing the gateway defined above
+  http:
+  - match:
+    - uri:
+        prefix: /
+    route:
+    - destination:
+        host: union-service.union-app.svc.cluster.local  # The service to which traffic will be routed
+        port:
+          number: 3000
